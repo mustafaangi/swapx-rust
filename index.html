@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapX DApp</title>
+    <script src="https://cdn.jsdelivr.net/npm/@polkadot/api/bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@polkadot/extension-dapp/bundle.js"></script>
+    <script src="app.js" type="module"></script>
+</head>
+<body>
+    <h1>SwapX - Simple Token Swap</h1>
+    <div>
+        <label for="tokenIn">Token In:</label>
+        <input type="text" id="tokenIn" placeholder="Token In Address">
+    </div>
+    <div>
+        <label for="amountIn">Amount In:</label>
+        <input type="number" id="amountIn" placeholder="Amount In">
+    </div>
+    <div>
+        <label for="tokenOut">Token Out:</label>
+        <input type="text" id="tokenOut" placeholder="Token Out Address">
+    </div>
+    <div>
+        <label for="slippage">Slippage Tolerance (%):</label>
+        <input type="number" id="slippage" placeholder="Slippage Tolerance">
+    </div>
+    <button id="swapButton">Swap Tokens</button>
+    <div id="status"></div>
+    <div>
+        <h2>Add Liquidity</h2>
+        <label for="liquidityToken">Token:</label>
+        <input type="text" id="liquidityToken" placeholder="Token Address">
+        <label for="liquidityAmount">Amount:</label>
+        <input type="number" id="liquidityAmount" placeholder="Amount">
+        <button id="addLiquidityButton">Add Liquidity</button>
+    </div>
+    <div>
+        <h2>Remove Liquidity</h2>
+        <label for="removeLiquidityToken">Token:</label>
+        <input type="text" id="removeLiquidityToken" placeholder="Token Address">
+        <label for="removeLiquidityAmount">Amount:</label>
+        <input type="number" id="removeLiquidityAmount" placeholder="Amount">
+        <button id="removeLiquidityButton">Remove Liquidity</button>
+    </div>
+</body>
+</html>

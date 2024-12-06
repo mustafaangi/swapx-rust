@@ -1,0 +1,41 @@
+[package]
+name = "swapx"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A simple token swap smart contract"
+
+[dependencies]
+ink = { version = "5.0.1", default-features = false }
+scale = { package = "parity-scale-codec", version = "3.2", default-features = false, features = ["derive"] }
+scale-info = { version = "2.5", default-features = false, features = ["derive"] }
+
+[lib]
+name = "swapx"
+path = "src/lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+]
+ink-as-dependency = []
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3
+overflow-checks = false
+codegen-units = 1
+debug = false
+
+[package.metadata.contract]
+name = "swapx"
+version = "0.1.0"
+authors = ["Your Name <your.email@example.com>"]
+description = "A simple token swap smart contract"
+
+[workspace]
+members = ["."]
